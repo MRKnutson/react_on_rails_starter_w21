@@ -1,24 +1,23 @@
-# README
+# Getting Started
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TLDR: need to clone with a unique project name and rename database
 
-Things you may want to cover:
+1. git clone git@github.com:MRKnutson/react_on_rails_starter_w21.git <new_project_name>
+2. cd <new_project_name>
+3. bundle
+4. rename database to something unique may use new_project_name in `database.yml`
+   - search for `react_on_rails_starter_w21` and replace with `<new_project_name>`
+5. rails db:create db:migrate db:seed
+6. cd client
+7. yarn
 
-* Ruby version
+## to test
 
-* System dependencies
+1. rails s -p 3001
+2. cd client && yarn start
 
-* Configuration
+## HANDLE GITHUB need new repo
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  - `git remote rm origin`
+  - create a new github repo
+  - `git remote add origin <sshlinktorepo>`
