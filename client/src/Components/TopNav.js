@@ -1,24 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Menu } from 'semantic-ui-react'
-import { Container, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar } from 'react-bootstrap'
 
 const TopNav = () => {
   return(
-    <Container>
-      <Navbar>
-        <Link to = "/">
-          Home
-        </Link>
-      </Navbar>
-    </Container>
-    // <Menu>
-    //   <Link to="/">
-    //     <Menu.Item>
-    //       Home
-    //     </Menu.Item>
-    //   </Link>
-    // </Menu>
+    <Navbar sticky="top" collapseOnSelect expand="md" bg="dark" variant="dark">
+      <Container>
+      <Navbar.Brand href = "/">HomePage</Navbar.Brand>
+      <Navbar.Toggle aria-controls="response-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="me-auto">
+          <Nav.Link href = "/">Home</Nav.Link>
+          <Nav.Link href = "/things">Things</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 };
 
